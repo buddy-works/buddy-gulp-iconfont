@@ -201,3 +201,12 @@ npm install
 gulp iconfont
 ```
 
+We also need run one initial command. To add it click *More options* and fill *Setup commands* input with this command:
+
+```
+npm install -g gulp
+```
+
+Now we can use `gulp` command in our Docker container.
+
+Click *Save this action*. First step is finished. 
