@@ -1,0 +1,73 @@
+@font-face {
+	font-family: 'iconfont';
+		src: url('../iconfont/iconfont.eot');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'iconfont';
+	src: url('../iconfont/iconfont.eot?1455276500308');
+	src: url('../iconfont/iconfont.eot?#iefix-1455276500308') format('embedded-opentype'),
+		url('../iconfont/iconfont.woff2?#iconfont-1455276500308') format('woff2'),
+		url('../iconfont/iconfont.woff?1455276500308') format('woff'),
+		url('../iconfont/iconfont.ttf?1455276500308') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^='icon-']:before,
+[class*=' icon-']:before {
+	font-family: 'iconfont';
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+	text-decoration: inherit;
+	font-size: inherit;
+	text-transform: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Icons list
+
+$icon-delete: '\';
+$icon-go-down: '\';
+$icon-go-left: '\';
+$icon-go-right: '\';
+$icon-go-up: '\';
+$icon-readme: '\';
+$icon-user: '\';
+
+
+.icon-delete:before {
+	content: $icon-delete;
+}
+
+.icon-go-down:before {
+	content: $icon-go-down;
+}
+
+.icon-go-left:before {
+	content: $icon-go-left;
+}
+
+.icon-go-right:before {
+	content: $icon-go-right;
+}
+
+.icon-go-up:before {
+	content: $icon-go-up;
+}
+
+.icon-readme:before {
+	content: $icon-readme;
+}
+
+.icon-user:before {
+	content: $icon-user;
+}

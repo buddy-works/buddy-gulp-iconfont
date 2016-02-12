@@ -1,0 +1,44 @@
+@font-face {
+	font-family: '<%= fontName %>';
+		src: url('<%= fontPath %><%= fontName %>.eot');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: '<%= fontName %>';
+	src: url('<%= fontPath %><%= fontName %>.eot?<%= fontDate %>');
+	src: url('<%= fontPath %><%= fontName %>.eot?#iefix-<%= fontDate %>') format('embedded-opentype'),
+		url('<%= fontPath %><%= fontName %>.woff2?#<%= fontName %>-<%= fontDate %>') format('woff2'),
+		url('<%= fontPath %><%= fontName %>.woff?<%= fontDate %>') format('woff'),
+		url('<%= fontPath %><%= fontName %>.ttf?<%= fontDate %>') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^='<%= className %>-']:before,
+[class*=' <%= className %>-']:before {
+	font-family: '<%= fontName %>';
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	font-weight: normal;
+	font-style: normal;
+	speak: none;
+	text-decoration: inherit;
+	font-size: inherit;
+	text-transform: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Icons list
+<% _.each(glyphs, function(icon){ %>
+$icon-<%= icon.name %>: '\<%= icon.unicode.toString(16) %>';<% }) %>
+
+<% _.each(glyphs, function(icon){ %>
+.<%= className %>-<%= icon.name %>:before {
+	content: $icon-<%= icon.name %>;
+}
+<% }) %>

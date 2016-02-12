@@ -1,0 +1,21 @@
+{
+  "name": "gulp-icons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://app.buddy.works/hehehe/gulp-icons"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-iconfont": "^5.0.1"
+  }
+}
