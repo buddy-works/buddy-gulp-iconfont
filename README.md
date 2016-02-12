@@ -3,12 +3,25 @@
 All sample icons are from [Maki Icon Set](https://github.com/mapbox/maki).
 
 
-```
-npm init -y
-```
+**package.json**
 
 ```
-npm install --save-dev gulp gulp-consolidate gulp-iconfont underscore
+{
+  "name": "gulp-icons",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "iconfont": "gulp iconfont"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-consolidate": "^0.1.2",
+    "gulp-iconfont": "^5.0.1",
+    "underscore": "^1.8.3"
+  }
+}
+
 ```
 
 **gulpfile.js**
@@ -92,6 +105,8 @@ Glyphs list
 }
 <% }) %>
 ```
+
+**iconfont-src/index.html**
 
 ```
 <!doctype html>
