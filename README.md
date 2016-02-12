@@ -225,6 +225,18 @@ In the opened window select *From a Docker container* mode, because we will need
 
 **Test your Pipeline**
 
-To test your first pipeline click on it, and click *Run pipeline* in side menu. Buddy will create new Docker container, make webfont from svg files and transfer it to FTP server. When pipeline will be finished go to your website and check results. You should see similar page when you open `index.html` file:
+To test your first pipeline click on it, and click *Run pipeline* in side menu. Buddy will create new Docker container, make webfont from svg files and transfer it to FTP server. When pipeline will be finished go to your website and check results. All glyphs preview is in generated `index.html` file. You should see similar page when you open it:
 
 ![Webfont preview](/_img/webfont-preview.png?raw=true)
+
+**How I can use generated webfont in my website**
+
+To use generated webfont you need only include `iconfont.css` on your website. Paste this code to `<head>` section:
+
+```
+<link rel="stylesheet" href="iconfont.css">
+```
+
+Now you can use custom glyphs in HTML, eg. `<i class="icon-zoo"></i>` or in CSS: `content: '\ea09';`. Remember to use correct paths to CSS file and webfont files. 
+
+Now, if you need new icon on website, you should only put new SVG file to `iconfont-src/scr` directory. Buddy will generate and deliver all for you.
