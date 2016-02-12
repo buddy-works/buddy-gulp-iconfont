@@ -17,7 +17,7 @@ gulp.task('iconfont', function () {
             gulp.src('iconfont-src/iconfont.css')
                 .pipe(consolidate('underscore', {
                     glyphs: glyphs,
-                    fontName: 'iconfont',
+                    fontName: options.fontName,
                     fontDate: new Date().getTime()
                 }))
                 .pipe(gulp.dest('iconfont'));
@@ -25,7 +25,7 @@ gulp.task('iconfont', function () {
             gulp.src('iconfont-src/glyphs.html')
                 .pipe(consolidate('underscore', {
                     glyphs: glyphs,
-                    fontName: 'buddyfont'
+                    fontName: options.fontName
                 }))
                 .pipe(gulp.dest('iconfont'));
         })
