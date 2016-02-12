@@ -217,4 +217,10 @@ Click *Save this action*. First step is finished.
 
 In second action we will transfer all generated files to FTP server. Click on *View & manage actions* section and add new *FTP action*. You can of course use another transfer action to send webfont on your server. We will use FTP, because its configuration is easy and fast.
 
-In the opened window select *From a Docker container* mode, because we will need files generated in previous action. Fill *Hostname*, *Login* and *Password* fields and click *More options* link. Fill *Artifacts path* input with `/iconfont/`, because all webfont files are in this directory. We set this path in `gulpfile.js`.
+In the opened window select *From a Docker container* mode, because we will need files generated in previous action. Fill *Hostname*, *Login* and *Password* fields and click *More options* link. Fill *Artifacts path* input with `/iconfont/`, because all webfont files are in this directory. We set this path in `gulpfile.js`. In this step you can also set *Remote Path* on your server. At the and click *Test connection & save this action on success* button. If you filled inputs with correct data, action should be added successfully.
+
+**Test your Pipeline**
+
+To test your first pipeline click on it, and click *Run pipeline* in side menu. Buddy will create new Docker container, make webfont from svg files and transfer it to FTP server. When pipeline will be finished go to your website and check results. You should see similar page when you open `index.html` file:
+
+![Webfont preview](/_img/webfont-preview?raw=true)
