@@ -20,7 +20,7 @@ gulp.task('iconfont', function () {
                 .pipe(consolidate('underscore', {
                     glyphs: glyphs,
                     fontName: 'iconfont',
-                    fontPath: '../iconfont/',
+                    fontPath: '',
                     className: 'icon',
                     fontDate: new Date().getTime()
                 }))

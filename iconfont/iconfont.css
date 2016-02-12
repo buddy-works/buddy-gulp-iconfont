@@ -1,17 +1,17 @@
 @font-face {
 	font-family: 'iconfont';
-		src: url('../iconfont/iconfont.eot');
+		src: url('iconfont.eot');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: 'iconfont';
-	src: url('../iconfont/iconfont.eot?1455278915633');
-	src: url('../iconfont/iconfont.eot?#iefix-1455278915633') format('embedded-opentype'),
-		url('../iconfont/iconfont.woff2?#iconfont-1455278915633') format('woff2'),
-		url('../iconfont/iconfont.woff?1455278915633') format('woff'),
-		url('../iconfont/iconfont.ttf?1455278915633') format('truetype');
+	src: url('iconfont.eot?1455279057781');
+	src: url('iconfont.eot?#iefix-1455279057781') format('embedded-opentype'),
+		url('iconfont.woff2?#iconfont-1455279057781') format('woff2'),
+		url('iconfont.woff?1455279057781') format('woff'),
+		url('iconfont.ttf?1455279057781') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
