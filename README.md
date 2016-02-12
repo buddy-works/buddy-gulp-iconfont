@@ -186,3 +186,7 @@ Glyphs list
 </html>
 ```
 
+## Buddy configuration
+
+Firstly go to [Buddy App](http://buddy.works) and create new project. You can host your own code or fork our sample repository from https://github.com/buddy-works/tutorial-gulp-iconfont.
+When your code is ready, create new Pipeline.
