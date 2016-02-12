@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     iconfont = require('gulp-iconfont');
 
 gulp.task('iconfont', function () {
-    return gulp.src('iconfont-src/*.svg')
+    return gulp.src('iconfont-src/svg/*.svg')
         .pipe(iconfont({
             fontName: 'iconfont',
             formats: ['ttf', 'eot', 'woff', 'woff2'],
@@ -14,15 +14,18 @@ gulp.task('iconfont', function () {
             centerHorizontally: true
         }))
         .on('glyphs', function (glyphs, options) {
-            console.log(glyphs);
-
             gulp.src('iconfont-src/iconfont.css')
                 .pipe(consolidate('underscore', {
                     glyphs: glyphs,
                     fontName: 'iconfont',
-                    fontPath: '',
-                    className: 'icon',
                     fontDate: new Date().getTime()
+                }))
+                .pipe(gulp.dest('iconfont'));
+
+            gulp.src('iconfont-src/glyphs.html')
+                .pipe(consolidate('underscore', {
+                    glyphs: glyphs,
+                    fontName: 'buddyfont'
                 }))
                 .pipe(gulp.dest('iconfont'));
         })

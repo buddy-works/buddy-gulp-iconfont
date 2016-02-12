@@ -1,23 +1,26 @@
+/**
+<%= fontName %> Webfont
+*/
 @font-face {
 	font-family: '<%= fontName %>';
-		src: url('<%= fontPath %><%= fontName %>.eot');
+		src: url('<%= fontName %>.eot');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: '<%= fontName %>';
-	src: url('<%= fontPath %><%= fontName %>.eot?<%= fontDate %>');
-	src: url('<%= fontPath %><%= fontName %>.eot?#iefix-<%= fontDate %>') format('embedded-opentype'),
-		url('<%= fontPath %><%= fontName %>.woff2?#<%= fontName %>-<%= fontDate %>') format('woff2'),
-		url('<%= fontPath %><%= fontName %>.woff?<%= fontDate %>') format('woff'),
-		url('<%= fontPath %><%= fontName %>.ttf?<%= fontDate %>') format('truetype');
+	src: url('<%= fontName %>.eot?<%= fontDate %>');
+	src: url('<%= fontName %>.eot?#iefix-<%= fontDate %>') format('embedded-opentype'),
+		url('<%= fontName %>.woff2?#<%= fontName %>-<%= fontDate %>') format('woff2'),
+		url('<%= fontName %>.woff?<%= fontDate %>') format('woff'),
+		url('<%= fontName %>.ttf?<%= fontDate %>') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
-[class^='<%= className %>-']:before,
-[class*=' <%= className %>-']:before {
+[class^='icon-']:before,
+[class*=' icon-']:before {
 	font-family: '<%= fontName %>';
 	display: inline-block;
 	vertical-align: middle;
@@ -37,7 +40,7 @@
 Glyphs list
 */
 <% _.each(glyphs, function(icon){ %>
-.<%= className %>-<%= icon.name %>:before {
-	content: '\<%= icon.unicode.toString(16) %>';
+.icon-<%= icon.name %>:before {
+	content: '\<%= icon.unicode[0].charCodeAt(0).toString(16) %>';
 }
 <% }) %>

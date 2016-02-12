@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Glyphs list</title>
+
+	<link rel="stylesheet" href="iconfont.css">
+	<style>
+		body {
+			font-family: Helvetica, Verdana, sans-serif;
+		}
+
+		ul {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+
+	<ul>
+		<% _.each(glyphs, function(icon){ %>
+		<li>
+			<i class="icon-<%= icon.name %>"></i>
+			<code>\<%= icon.unicode[0].charCodeAt(0).toString(16) %></code>
+			<%= icon.name %>
+		</li>
+		<% }) %>
+	</ul>
+
+</body>
+</html>
