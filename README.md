@@ -203,12 +203,14 @@ npm install
 gulp iconfont
 ```
 
+![Webfont preview](/_img/gulp-action.png?raw=true)
+
 We also need run one initial command. To add it click *More options* and fill *Setup commands* input with this command:
 
 ```
 npm install -g gulp
 ```
-
+images
 Now we can use `gulp` command in our Docker container.
 
 Click *Save this action*. First step is finished. 
@@ -216,6 +218,8 @@ Click *Save this action*. First step is finished.
 **Transfering files to FTP server**
 
 In second action we will transfer all generated files to FTP server. Click on *View & manage actions* section and add new *FTP action*. You can of course use another transfer action to send webfont on your server. We will use FTP, because its configuration is easy and fast.
+
+![Webfont preview](/_img/ftp-action.png?raw=true)
 
 In the opened window select *From a Docker container* mode, because we will need files generated in previous action. Fill *Hostname*, *Login* and *Password* fields and click *More options* link. Fill *Artifacts path* input with `/iconfont/`, because all webfont files are in this directory. We set this path in `gulpfile.js`. In this step you can also set *Remote Path* on your server. At the and click *Test connection & save this action on success* button. If you filled inputs with correct data, action should be added successfully.
 
