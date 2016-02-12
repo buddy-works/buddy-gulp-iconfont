@@ -22,7 +22,7 @@ gulp.task('iconfont', function () {
                 }))
                 .pipe(gulp.dest('iconfont'));
 
-            gulp.src('iconfont-src/glyphs.html')
+            gulp.src('iconfont-src/index.html')
                 .pipe(consolidate('underscore', {
                     glyphs: glyphs,
                     fontName: options.fontName
