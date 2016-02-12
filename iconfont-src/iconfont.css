@@ -5,7 +5,7 @@
 	font-family: '<%= fontName %>';
 	src: url('<%= fontName %>.eot?<%= fontDate %>');
 	src: url('<%= fontName %>.eot?#iefix-<%= fontDate %>') format('embedded-opentype'),
-		url('<%= fontName %>.woff2?#<%= fontName %>-<%= fontDate %>') format('woff2'),
+		url('<%= fontName %>.woff2?<%= fontDate %>') format('woff2'),
 		url('<%= fontName %>.woff?<%= fontDate %>') format('woff'),
 		url('<%= fontName %>.ttf?<%= fontDate %>') format('truetype');
 	font-weight: normal;
