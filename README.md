@@ -210,7 +210,7 @@ We also need run one initial command. To add it click *More options* and fill *S
 ```
 npm install -g gulp
 ```
-images
+
 Now we can use `gulp` command in our Docker container.
 
 Click *Save this action*. First step is finished. 
