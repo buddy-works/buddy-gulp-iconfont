@@ -239,4 +239,4 @@ To use generated webfont you need only include `iconfont.css` on your website. P
 
 Now you can use custom glyphs in HTML, eg. `<i class="icon-zoo"></i>` or in CSS: `content: '\ea09';`. Remember to use correct paths to CSS file and webfont files. 
 
-Now, if you need new icon on website, you should only put new SVG file to `iconfont-src/scr` directory. Buddy will generate and deliver all for you.
+Now, if you need new icon on website, you should only put new SVG file to `iconfont-src/scr` directory. Buddy will do dirty job for you.
