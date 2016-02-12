@@ -223,4 +223,4 @@ In the opened window select *From a Docker container* mode, because we will need
 
 To test your first pipeline click on it, and click *Run pipeline* in side menu. Buddy will create new Docker container, make webfont from svg files and transfer it to FTP server. When pipeline will be finished go to your website and check results. You should see similar page when you open `index.html` file:
 
-![Webfont preview](/_img/webfont-preview?raw=true)
+![Webfont preview](/_img/webfont-preview.png?raw=true)
