@@ -33,12 +33,11 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-// Icons list
-<% _.each(glyphs, function(icon){ %>
-$icon-<%= icon.name %>: '\<%= icon.unicode.toString(16) %>';<% }) %>
-
+/*
+Glyphs list
+*/
 <% _.each(glyphs, function(icon){ %>
 .<%= className %>-<%= icon.name %>:before {
-	content: $icon-<%= icon.name %>;
+	content: '\<%= icon.unicode.toString(16) %>';
 }
 <% }) %>
