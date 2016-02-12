@@ -1,61 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   version="1.1"
-   width="24"
-   height="24"
-   id="svg4460">
-  <defs
-     id="defs4462" />
-  <metadata
-     id="metadata4465">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <g
-     transform="translate(0,-1028.3622)"
-     id="layer1">
-    <g
-       transform="translate(-318,-21.999983)"
-       id="restaurant-24"
-       style="display:inline">
-      <g
-         transform="translate(0,-1)"
-         id="g16702">
-        <path
-           d="m 523.5,26 c -0.5,0 -0.5,0.5 -0.5,0.5 l 0,6 c 0,0.505147 0.5,1 1,1.5 0.5,0.5 0.52601,1.00584 0.5,1.5 l 0,1.5 -0.5,6.5 c -0.0383,0.4985 0.5,1.5 1.5,1.5 1,0 1.53846,-1 1.5,-1.5 l -0.5,-6.5 0,-1.5 c 0,-0.478617 0,-1 0.5,-1.5 0.46054,-0.460539 1,-0.978617 1,-1.5 l 0,-6 c 0,0 0,-0.5 -0.5,-0.5 -0.5,0 -0.5,0.5 -0.5,0.5 l 0,4.5 c 0,0 0,0.5 -0.5,0.5 C 526,31.5 526,31 526,31 l 0,-4.5 c 0,0 0,-0.5 -0.5,-0.5 -0.5,0 -0.5,0.5 -0.5,0.5 l 0,4.5 c 0,0 0,0.5 -0.5,0.5 C 524,31.5 524,31 524,31 l 0,-4.5 c 0,0 0,-0.5 -0.5,-0.5 z m 10.5,0 c -1,0 -2.86754,0.2351 -3.5,1.5 -0.5,1 -0.5,3.5 -0.5,4.5 l 0,5 c 0,0.5 0.5,1 1,1 l 1,0 0,6 c 0,0.5 0.5,1 1,1 0.5,0 1,-0.5 1,-1 z"
-           inkscape:connector-curvature="0"
-           transform="translate(-198,1027.3622)"
-           id="path5418"
-           style="opacity:0.3;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-        <path
-           d="m 523.5,26 c -0.5,0 -0.5,0.5 -0.5,0.5 l 0,6 c 0,0.5 0.5,1 1,1.5 0.5,0.5 0.5,1 0.5,1.5 0,0 0,1 0,1.5 0,0.5 -0.5,6.5 -0.5,6.5 -0.0383,0.4985 0.5,1.5 1.5,1.5 1,0 1.53846,-1 1.5,-1.5 0,0 -0.5,-6 -0.5,-6.5 0,-0.5 0,-1.5 0,-1.5 0,-0.5 0,-1 0.5,-1.5 0.46054,-0.460539 1,-1 1,-1.5 l 0,-6 c 0,0 0,-0.5 -0.5,-0.5 -0.5,0 -0.5,0.5 -0.5,0.5 l 0,4.5 c 0,0 0,0.5 -0.5,0.5 C 526,31.5 526,31 526,31 l 0,-4.5 c 0,0 0,-0.5 -0.5,-0.5 -0.5,0 -0.5,0.5 -0.5,0.5 l 0,4.5 c 0,0 0,0.5 -0.5,0.5 C 524,31.5 524,31 524,31 l 0,-4.5 c 0,0 0,-0.5 -0.5,-0.5 z m 10.5,0 c -1,0 -2.86754,0.2351 -3.5,1.5 -0.5,1 -0.5,3.5 -0.5,4.5 l 0,5 c 0,0.5 0.5,1 1,1 l 1,0 0,6 c 0,0.5 0.5,1 1,1 0.5,0 1,-0.5 1,-1 z"
-           inkscape:connector-curvature="0"
-           transform="translate(-198,1027.3622)"
-           id="path5304"
-           style="color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-      </g>
-    </g>
-  </g>
-  <rect
-     width="24"
-     height="24"
-     x="0"
-     y="0"
-     id="canvas"
-     style="fill:none;stroke:none;visibility:hidden" />
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
+<path id="path5304" fill="#000000" d="M7.6,0C6.7,0,6.7,0.8,6.7,0.8v10.1c0,0.8,0.8,1.7,1.7,2.5
+	s0.8,1.7,0.8,2.5c0,0,0,1.7,0,2.5S8.4,29.5,8.4,29.5C8.4,30.3,9.3,32,10.9,32s2.6-1.7,2.5-2.5c0,0-0.8-10.1-0.8-10.9s0-2.5,0-2.5
+	c0-0.8,0-1.7,0.8-2.5c0.8-0.8,1.7-1.7,1.7-2.5V0.8c0,0,0-0.8-0.8-0.8c-0.8,0-0.8,0.8-0.8,0.8v7.6c0,0,0,0.8-0.8,0.8
+	c-0.8,0-0.8-0.8-0.8-0.8V0.8c0,0,0-0.8-0.8-0.8c-0.8,0-0.8,0.8-0.8,0.8v7.6c0,0,0,0.8-0.8,0.8S8.4,8.4,8.4,8.4V0.8
+	C8.4,0.8,8.4,0,7.6,0z M25.3,0c-1.7,0-4.8,0.4-5.9,2.5c-0.8,1.7-0.8,5.9-0.8,7.6v8.4c0,0.8,0.8,1.7,1.7,1.7h1.7v10.1
+	c0,0.8,0.8,1.7,1.7,1.7s1.7-0.8,1.7-1.7V0z"/>
 </svg>

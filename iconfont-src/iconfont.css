@@ -3,13 +3,6 @@
 */
 @font-face {
 	font-family: '<%= fontName %>';
-		src: url('<%= fontName %>.eot');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: '<%= fontName %>';
 	src: url('<%= fontName %>.eot?<%= fontDate %>');
 	src: url('<%= fontName %>.eot?#iefix-<%= fontDate %>') format('embedded-opentype'),
 		url('<%= fontName %>.woff2?#<%= fontName %>-<%= fontDate %>') format('woff2'),
