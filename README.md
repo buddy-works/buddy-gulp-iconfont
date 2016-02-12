@@ -189,4 +189,7 @@ Glyphs list
 ## Buddy configuration
 
 Firstly go to [Buddy App](http://buddy.works) and create new project. You can host your own code or fork our sample repository from https://github.com/buddy-works/tutorial-gulp-iconfont.
-When your code is ready, create new Pipeline.
+
+When your code is ready, create new Pipeline. In new window name the new action and select mode to *Automatic*. This means that after push to your repository webfont will be generated automatically. You can also select manual mode, but remember that you will have to manually run build after any change. 
+
+Click "Add a new pipeline". In new window you can add necessary actions. Our pipeline will consist of two actions: generating webfont and transferring result to FTP server.
