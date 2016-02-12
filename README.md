@@ -194,6 +194,8 @@ When your code is ready, create new Pipeline. In new window name the new action 
 
 Click "Add a new pipeline". In new window you can add necessary actions. Our pipeline will consist of two actions: generating webfont and transferring result to FTP server. 
 
+**Docker configuration**
+
 Because we use gulp to generating webfont first action that we need is *Node*. In configuration window select newest Node.js version and add two commands in *Execute commands* input:
 
 ```
@@ -210,3 +212,9 @@ npm install -g gulp
 Now we can use `gulp` command in our Docker container.
 
 Click *Save this action*. First step is finished. 
+
+**Transfering files to FTP server**
+
+In second action we will transfer all generated files to FTP server. Click on *View & manage actions* section and add new *FTP action*. You can of course use another transfer action to send webfont on your server. We will use FTP, because its configuration is easy and fast.
+
+In the opened window select *From a Docker container* mode, because we will need files generated in previous action. Fill *Hostname*, *Login* and *Password* fields and click *More options* link. Fill *Artifacts path* input with `/iconfont/`, because all webfont files are in this directory. We set this path in `gulpfile.js`.
