@@ -71,8 +71,9 @@ gulp.task('iconfont', function () {
 });
 ```
 
-Let's look at its contents. At the beginning we grab all SVG files from `iconfont-src/svg/`. This is the main directory and you should put all SVG sources to it.
- 
+Let's look at its contents. At the beginning we grab all SVG files from `iconfont-src/svg/`. This is the main directory and you should put all SVG sources to it. In the next step gulp.js will create webfonts in 4 different formats: `ttf`, `eot`, `woff` and `woff2`. You can modify this line and set only necessary font extensions. Other settings are selected to best font rendering. You can obviously experiment with this options.
+
+When all font are generated and ready to save gulp.js trigger `glyphs` event and we will use it to save font character codepoints to CSS file and HTML demo page. We will use `iconfont-src/iconfont.css` and `iconfont-src/index.html` underscore templates. All font data will be used like underscore template. Look at my files:
 
 **iconfont-src/iconfont.css**
 
@@ -117,6 +118,8 @@ Glyphs list
 }
 <% }) %>
 ```
+
+CSS template is most important, because it will be used as main part of our website. Thereby you can use icons in your HTML file with this syntax: `<i class="icon-rocket"></i>` or in CSS: `content: '\ea09';`.
 
 **iconfont-src/index.html**
 
