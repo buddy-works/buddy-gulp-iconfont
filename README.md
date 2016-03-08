@@ -119,7 +119,7 @@ Glyphs list
 <% }) %>
 ```
 
-CSS template is most important, because it will be used as main part of our website. Thereby you can use icons in your HTML file with this syntax: `<i class="icon-rocket"></i>` or in CSS: `content: '\ea09';`.
+CSS template is most important, because it will be used as main part of our website. Thereby you can use icons in your HTML file with this syntax: `<i class="icon-rocket"></i>` or in CSS: `content: '\ea09';`. Remember that this is only source and all results will be placed in `iconfont/` directory.
 
 **iconfont-src/index.html**
 
