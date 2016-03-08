@@ -5,7 +5,7 @@ All sample icons are from [Maki Icon Set](https://github.com/mapbox/maki).
 
 **package.json**
 
-```
+```json
 {
   "name": "gulp-icons",
   "version": "1.0.0",
@@ -26,7 +26,7 @@ All sample icons are from [Maki Icon Set](https://github.com/mapbox/maki).
 
 **gulpfile.js**
 
-```
+```js
 var gulp = require('gulp'),
     consolidate = require('gulp-consolidate'),
     iconfont = require('gulp-iconfont');
@@ -64,7 +64,7 @@ gulp.task('iconfont', function () {
 
 **iconfont-src/iconfont.css**
 
-```
+```css
 /**
 <%= fontName %> Webfont
 */
@@ -108,7 +108,7 @@ Glyphs list
 
 **iconfont-src/index.html**
 
-```
+```hmtl
 <!doctype html>
 <html lang="en">
 <head>
@@ -233,7 +233,7 @@ To test your first pipeline click on it, and click *Run pipeline* in side menu. 
 
 To use generated webfont you need only include `iconfont.css` on your website. Paste this code to `<head>` section:
 
-```
+```html
 <link rel="stylesheet" href="iconfont.css">
 ```
 
