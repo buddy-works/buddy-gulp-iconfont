@@ -201,6 +201,8 @@ CSS template is most important, because it will be used as main part of our webs
 </html>
 ```
 
+To make it easier to view results we will create second template. It will be placed in `iconfont-src/index.html` file and will be show all icons with codepoints and CSS classes. You don't need to create it, but it is very useful for developing. This is only demo page with results of our work.
+
 ## Buddy configuration
 
 Firstly go to [Buddy App](http://buddy.works) and create new project. You can host your own code or fork our sample repository from https://github.com/buddy-works/tutorial-gulp-iconfont.
