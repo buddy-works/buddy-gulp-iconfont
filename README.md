@@ -8,6 +8,8 @@ Firstly we need a few icons in SVG format. You can use Illustrator, Inkscape or 
 
 **package.json**
 
+Because we will use gulp.js to create webfont, you must create `package.json` file with those content:
+
 ```json
 {
   "name": "gulp-icons",
@@ -26,6 +28,8 @@ Firstly we need a few icons in SVG format. You can use Illustrator, Inkscape or 
 }
 
 ```
+
+`gulp` and `gulp-iconfont` are the main part of our script, but we will use two other dependencies `gulp-consolidate` and `underscore` to create HTMl and CSS files from prepared templates. Thereby we can use all classes in CSS or variables in SCSS or LESS.
 
 **gulpfile.js**
 
