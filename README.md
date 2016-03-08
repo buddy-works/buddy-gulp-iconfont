@@ -108,7 +108,7 @@ Glyphs list
 
 **iconfont-src/index.html**
 
-```hmtl
+```html
 <!doctype html>
 <html lang="en">
 <head>
