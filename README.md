@@ -29,9 +29,11 @@ Because we will use gulp.js to create webfont, you must create `package.json` fi
 
 ```
 
-`gulp` and `gulp-iconfont` are the main part of our script, but we will use two other dependencies `gulp-consolidate` and `underscore` to create HTMl and CSS files from prepared templates. Thereby we can use all classes in CSS or variables in SCSS or LESS.
+`gulp` and `gulp-iconfont` are the main part of our script, but we will use two other dependencies `gulp-consolidate` and `underscore` to create HTML and CSS files from prepared templates. Thereby we can use all classes in CSS or variables in SCSS or LESS.
 
 **gulpfile.js**
+
+In the next step create `gulpfile.js` file with content shown below. We need only one gulp task, because it does everything we need.
 
 ```js
 var gulp = require('gulp'),
@@ -68,6 +70,9 @@ gulp.task('iconfont', function () {
         .pipe(gulp.dest('iconfont'));
 });
 ```
+
+Let's look at its contents. At the beginning we grab all SVG files from `iconfont-src/svg/`. This is the main directory and you should put all SVG sources to it.
+ 
 
 **iconfont-src/iconfont.css**
 
