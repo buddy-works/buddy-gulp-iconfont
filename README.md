@@ -1,6 +1,6 @@
 # How to create webfont from SVG files with Buddy
 
-All sample icons are from [Maki Icon Set](https://github.com/mapbox/maki).
+In this tutorial, we’ll look at how to turn SVG icons into a web font using Buddy and Gulp.js. Then, we’ll look at how to use the generated font files and CSS in a web page. All sample icons are from [Maki Icon Set](https://github.com/mapbox/maki).
 
 
 **package.json**
