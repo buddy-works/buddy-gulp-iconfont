@@ -12,7 +12,7 @@ All icons should be:
 
 Once you aplly these settings to all icons, you are ready to create the webfont.
 
-!![Prepared SVG icons](https://buddy.works/data/blog/_images/build-webfont/gulp-1.png)
+![Prepared SVG icons](https://buddy.works/data/blog/_images/build-webfont/gulp-1.png)
 
 # Generating package.json
 
@@ -231,7 +231,7 @@ The second template will show all icons with codepoints and CSS classes, making 
 
 2. Create a new pipeline and set the trigger mode to **On every push**: the webfont will be generated automatically every time you make a push to the specified branch:
  
-	!![Setting pipeline details](https://buddy.works/data/blog/_images/build-webfont/gulp-2.png)
+	![Setting pipeline details](https://buddy.works/data/blog/_images/build-webfont/gulp-2.png)
 	
 3. (Optional) Click **More options** and paste the URL to your website to quickly access it from the pipeline view.
 
@@ -241,7 +241,7 @@ The second template will show all icons with codepoints and CSS classes, making 
 
 1. Since we use gulp to generate the webfont, add **node** as the first action:
 
-	!![Choosing build action](https://buddy.works/data/blog/_images/build-webfont/gulp-3.png)
+	![Choosing build action](https://buddy.works/data/blog/_images/build-webfont/gulp-3.png)
 
 2. On the action config view select the newest Node.js version and enter these commands in the input:
 
@@ -250,7 +250,7 @@ The second template will show all icons with codepoints and CSS classes, making 
 	
 	The node action comes with `npm install -g gulp` predefined, so there's no need to install anything else.
 
-	!![Configuring build commands](https://buddy.works/data/blog/_images/build-webfont/gulp-4.png)
+	![Configuring build commands](https://buddy.works/data/blog/_images/build-webfont/gulp-4.png)
 
 3. Click **Add this action** to save changes.
 
@@ -260,13 +260,13 @@ The second template will show all icons with codepoints and CSS classes, making 
 
 1. Add another action and select the transfer action for your server type. In this example we'll use FTP:
 
-	!![Choosing delivery action](https://buddy.works/data/blog/_images/build-webfont/gulp-5.png)
+	![Choosing delivery action](https://buddy.works/data/blog/_images/build-webfont/gulp-5.png)
 
 2. On the action config view, select **pipeline filesystem** as the source.
 
 3. Provide login details to your server and set the source path to `iconfont`. It contains all webfont files (we set this path in `gulpfiles.js`)
 
-	!![Configuring FTP delivery](https://buddy.works/data/blog/_images/build-webfont/gulp-6.png)
+	![Configuring FTP delivery](https://buddy.works/data/blog/_images/build-webfont/gulp-6.png)
 
 4. Confirm changes and test connection. If everything's correct, Buddy will add the action to the pipeline.
 
@@ -276,15 +276,15 @@ The second template will show all icons with codepoints and CSS classes, making 
 
 Congratulations! You have just automated webfont generation for your site. When you're ready, click **Run pipeline** > **Run now** to test the process:
 
-!![Testing pipeline](https://buddy.works/data/blog/_images/build-webfont/gulp-7.png)
+![Testing pipeline](https://buddy.works/data/blog/_images/build-webfont/gulp-7.png)
 
 Buddy will create a Docker container, make the webfont from SVG files, and transfer it to your FTP server:
 
-!![Execution summary](https://buddy.works/data/blog/_images/build-webfont/gulp-8.png)
+![Execution summary](https://buddy.works/data/blog/_images/build-webfont/gulp-8.png)
 
 When the release is over, go to your website and check the results. All glyphs have been generated in `index.html`. The page should be similar to this:
 
-!![Results preview](https://buddy.works/data/blog/_images/build-webfont/gulp-9.png)
+![Results preview](https://buddy.works/data/blog/_images/build-webfont/gulp-9.png)
 
 ---
 
