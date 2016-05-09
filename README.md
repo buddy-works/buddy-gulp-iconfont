@@ -250,7 +250,7 @@ The second template will show all icons with codepoints and CSS classes, making 
 	
 	The node action comes with `npm install -g gulp` predefined, so there's no need to install anything else.
 
-	!![Configuring build commands](build-webfont/gulp-4.png)
+	!![Configuring build commands](https://buddy.works/data/blog/_images/build-webfont/gulp-4.png)
 
 3. Click **Add this action** to save changes.
 
@@ -260,7 +260,7 @@ The second template will show all icons with codepoints and CSS classes, making 
 
 1. Add another action and select the transfer action for your server type. In this example we'll use FTP:
 
-	!![Choosing delivery action](build-webfont/gulp-5.png)
+	!![Choosing delivery action](https://buddy.works/data/blog/_images/build-webfont/gulp-5.png)
 
 2. On the action config view, select **pipeline filesystem** as the source.
 
