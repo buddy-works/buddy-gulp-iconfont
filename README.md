@@ -1,14 +1,22 @@
-# How to create webfont from SVG files with Buddy
+In this tutorial we'll turn SVG icons into a webfont with Gulp.js and use it with a CSS in a web page.
 
-In this tutorial, we’ll look at how to turn SVG icons into a web font using Buddy and gulp.js. Then, we’ll look at how to use the generated font files and CSS in a web page.
+# Preparing SVG icons
 
-**Prepare your icons**
+First, we need a few icons in the SVG format. You can use Illustrator, Inkscape or another vector-drawing tool. For this example I shall use icons from the [Maki Icon Set](https://github.com/mapbox/maki).
 
-Firstly we need a few icons in SVG format. You can use Illustrator, Inkscape or other vector-draving tool. Because I'm too lazy, I used icons from [Maki Icon Set](https://github.com/mapbox/maki). All icons have the same dimensions and should be with solid black color and white background. Once you have done this for all of the icons, you are ready to create a web font.
+All icons should be:
 
-**package.json**
+- the same size
+- in solid black color
+- on white background
 
-Because we will use gulp.js to create webfont, you must create `package.json` file with those content:
+Once you aplly these settings to all icons, you are ready to create the webfont.
+
+!![Prepared SVG icons](https://buddy.works/data/blog/_images/build-webfont/gulp-1.png)
+
+# Generating package.json
+
+To create a webfont with gulp.js, we need a `package.json` with the following content:
 
 ```json
 {
@@ -29,11 +37,11 @@ Because we will use gulp.js to create webfont, you must create `package.json` fi
 
 ```
 
-`gulp` and `gulp-iconfont` are the main part of our script, but we will use two other dependencies `gulp-consolidate` and `underscore` to create HTML and CSS files from prepared templates. Thereby we can use all classes in CSS or variables in SCSS or LESS.
+The main parts of our script are `gulp` and `gulp-iconfont`, but we will use two other dependencies, `gulp-consolidate` and `underscore`, to create HTML and CSS files from prepared templates. This way we'll be able to generate classes in the CSS, or variables in the SCSS.
 
-**gulpfile.js**
+# Generating gulpfile.js
 
-In the next step create `gulpfile.js` file with content shown below. We need only one gulp task, because it does everything we need.
+Now we have to generate a `gulpfile.js`. We need only one gulp task, because it will do everything we need:
 
 ```js
 var gulp = require('gulp'),
@@ -71,11 +79,23 @@ gulp.task('iconfont', function () {
 });
 ```
 
-Let's look at its contents. At the beginning we grab all SVG files from `iconfont-src/svg/`. This is the main directory and you should put all SVG sources to it. In the next step gulp.js will create webfonts in 4 different formats: `ttf`, `eot`, `woff` and `woff2`. You can modify this line and set only necessary font extensions. Other settings are selected to best font rendering. You can obviously experiment with this options.
+# How gulpfile.js works
 
-When all font are generated and ready to save gulp.js trigger `glyphs` event and we will use it to save font character codepoints to CSS file and HTML demo page. We will use `iconfont-src/iconfont.css` and `iconfont-src/index.html` underscore templates. All font data will be used like underscore template. Look at my files:
+- First we grab all SVG files from `iconfont-src/svg/`. This is the main directory where you should put all SVG sources.
+- Next gulp.js creates webfonts in 4 formats: `ttf`, `eot`, `woff` and `woff2`. You can modify this line to your desired extensions.
+- The rest of settings define font rendering. You can experiment with these options to your liking.
+- When the font's been generated, gulp.js triggers the `glyphs` event which saves font character codepoints to CSS file and HTML demo page: `iconfont-src/iconfont.css` and `iconfont-src/index.html`.
 
-**iconfont-src/iconfont.css**
+# Contents of iconfont-src/iconfont.css
+
+The gulp file defines all font data. It will be used as an underscore template. The CSS template is the most important, because it will be used as the main part of our website.
+
+You can use the icons with this syntax:
+
+- in HTML: `<i class="icon-rocket"></i>`
+- in CSS: `content: '\ea09';`
+
+Remember that this is only source and all results will be placed in the `iconfont` directory.
 
 ```css
 /**
@@ -119,9 +139,9 @@ Glyphs list
 <% }) %>
 ```
 
-CSS template is most important, because it will be used as main part of our website. Thereby you can use icons in your HTML file with this syntax: `<i class="icon-rocket"></i>` or in CSS: `content: '\ea09';`. Remember that this is only source and all results will be placed in `iconfont/` directory.
+# Contents of iconfont-src/index.html
 
-**iconfont-src/index.html**
+The second template will show all icons with codepoints and CSS classes, making it easier to view the results. You don't need to create it, but it's very useful for development.
 
 ```html
 <!doctype html>
@@ -201,59 +221,88 @@ CSS template is most important, because it will be used as main part of our webs
 </html>
 ```
 
-To make it easier to view results we will create second template. It will be placed in `iconfont-src/index.html` file and will be show all icons with codepoints and CSS classes. You don't need to create it, but it is very useful for developing. This is only demo page with results of our work.
+---
 
-## Buddy configuration
+# Buddy configuration
 
-Firstly go to [Buddy App](http://buddy.works) and create new project. You can host your own code or fork our sample repository from https://github.com/buddy-works/tutorial-gulp-iconfont.
+## Setting up delivery pipeline
 
-When your code is ready, create new Pipeline. In new window name the new action and select mode to *Automatic*. This means that after push to your repository webfont will be generated automatically. You can also select manual mode, but remember that you will have to manually run build after any change. 
+1. Fire up [Buddy](https://buddy.works) and create a new project. Select Buddy as the provider and push your code, or fork our sample repository from [https://github.com/buddy-works/tutorial-gulp-iconfont](https://github.com/buddy-works/tutorial-gulp-iconfont).
 
-Click *Add a new pipeline*. In new window you can add necessary actions. Our pipeline will consist of two actions: generating webfont and transferring result to FTP server. 
+2. Create a new pipeline and set the trigger mode to **On every push**: the webfont will be generated automatically every time you make a push to the specified branch:
+ 
+	!![Setting pipeline details](https://buddy.works/data/blog/_images/build-webfont/gulp-2.png)
+	
+3. (Optional) Click **More options** and paste the URL to your website to quickly access it from the pipeline view.
 
-**Docker configuration**
+---
 
-Because we use gulp to generating webfont first action that we need is *Node*. In configuration window select newest Node.js version and add two commands in *Execute commands* input:
+## Configuring build
 
-```
-npm install
-gulp iconfont
-```
+1. Since we use gulp to generate the webfont, add **node** as the first action:
 
-![Webfont preview](/_img/gulp-action.png?raw=true)
+	!![Choosing build action](https://buddy.works/data/blog/_images/build-webfont/gulp-3.png)
 
-We also need run one initial command. To add it click *More options* and fill *Setup commands* input with this command:
+2. On the action config view select the newest Node.js version and enter these commands in the input:
 
-```
-npm install -g gulp
-```
+		npm install
+		gulp iconfont
+	
+	The node action comes with `npm install -g gulp` predefined, so there's no need to install anything else.
 
-Now we can use `gulp` command in our Docker container.
+	!![Configuring build commands](build-webfont/gulp-4.png)
 
-Click *Save this action*. First step is finished. 
+3. Click **Add this action** to save changes.
 
-**Transfering files to FTP server**
+---
 
-In second action we will transfer all generated files to FTP server. Click on *View & manage actions* section and add new *FTP action*. You can of course use another transfer action to send webfont on your server. We will use FTP, because its configuration is easy and fast.
+## Configuring delivery
 
-![Webfont preview](/_img/ftp-action.png?raw=true)
+1. Add another action and select the transfer action for your server type. In this example we'll use FTP:
 
-In the opened window select *From a Docker container* mode, because we will need files generated in previous action. Fill *Hostname*, *Login* and *Password* fields and click *More options* link. Fill *Artifacts path* input with `/iconfont/`, because all webfont files are in this directory. We set this path in `gulpfile.js`. In this step you can also set *Remote Path* on your server. At the and click *Test connection & save this action on success* button. If you filled inputs with correct data, action should be added successfully.
+	!![Choosing delivery action](build-webfont/gulp-5.png)
 
-**Test your Pipeline**
+2. On the action config view, select **pipeline filesystem** as the source.
 
-To test your first pipeline click on it, and click *Run pipeline* in side menu. Buddy will create new Docker container, make webfont from svg files and transfer it to FTP server. When pipeline will be finished go to your website and check results. All glyphs preview is in generated `index.html` file. You should see similar page when you open it:
+3. Provide login details to your server and set the source path to `iconfont`. It contains all webfont files (we set this path in `gulpfiles.js`)
 
-![Webfont preview](/_img/webfont-preview.png?raw=true)
+	!![Configuring FTP delivery](https://buddy.works/data/blog/_images/build-webfont/gulp-6.png)
 
-**How I can use generated webfont in my website**
+4. Confirm changes and test connection. If everything's correct, Buddy will add the action to the pipeline.
 
-To use generated webfont you need only include `iconfont.css` on your website. Paste this code to `<head>` section:
+---
+
+## Testing your pipeline
+
+Congratulations! You have just automated webfont generation for your site. When you're ready, click **Run pipeline** > **Run now** to test the process:
+
+!![Testing pipeline](https://buddy.works/data/blog/_images/build-webfont/gulp-7.png)
+
+Buddy will create a Docker container, make the webfont from SVG files, and transfer it to your FTP server:
+
+!![Execution summary](https://buddy.works/data/blog/_images/build-webfont/gulp-8.png)
+
+When the release is over, go to your website and check the results. All glyphs have been generated in `index.html`. The page should be similar to this:
+
+!![Results preview](https://buddy.works/data/blog/_images/build-webfont/gulp-9.png)
+
+---
+
+# How to use the new webfont on my website
+
+To use the generated webfont on your site, just paste `iconfont.css` in the `<head>` section:
 
 ```html
 <link rel="stylesheet" href="iconfont.css">
 ```
 
-Now you can use custom glyphs in HTML, eg. `<i class="icon-zoo"></i>` or in CSS: `content: '\ea09';`. Remember to use correct paths to CSS file and webfont files. 
+Now you can use custom glyphs:
 
-Now, if you need new icon on website, you should only put new SVG file to `iconfont-src/scr` directory. Buddy will do dirty job for you.
+* in  HTML: `<i class="icon-zoo"></i>`
+* in CSS: `content: '\ea09';`
+
+Remember to use correct paths to your CSS and webfont files!
+
+# Adding new SVG files to generator 
+
+From now on, any time you need to add a new icon on your website just put the SVG file in the `iconfont-src/scr` directory, and Buddy will take care of the rest.
